@@ -457,7 +457,13 @@ public class administradorRegistrar extends javax.swing.JFrame {
             
             JOptionPane.showMessageDialog(rootPane,"Ingresar solo números");
         }
-        if(textDNI.getText().length()>=8){
+
+        // Esta sección se encarga de validar la longitud del dni y
+        // permite cualquier valor con 8 o más caracteres.
+        // Se cambiará la función para que solo acepte exactamente 8 caracteres
+        // El cambio es simple y quedaría como sigue:
+
+        if(textDNI.getText().length() != 8){
             getToolkit().beep();
             evt.consume();
             
