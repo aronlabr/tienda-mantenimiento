@@ -58,6 +58,7 @@ public class logueo extends javax.swing.JFrame {
     private void initComponents() {
         java.awt.GridBagConstraints gridBagConstraints;
 
+        chkbox = new javax.swing.JCheckBox();
         jPanel6 = new logo();
         jPanel5 = new logo();
 
@@ -91,6 +92,16 @@ public class logueo extends javax.swing.JFrame {
             }
         });
 
+        chkbox.setBackground(new java.awt.Color(72, 104, 218));
+        chkbox.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        chkbox.setForeground(new java.awt.Color(255, 255, 255));
+        chkbox.setText("Mostrar contraseña");
+        chkbox.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                chkboxActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
@@ -98,6 +109,7 @@ public class logueo extends javax.swing.JFrame {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(chkbox)
                     .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                         .addComponent(password)
                         .addComponent(user, javax.swing.GroupLayout.PREFERRED_SIZE, 222, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -111,7 +123,9 @@ public class logueo extends javax.swing.JFrame {
                 .addComponent(user, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(57, 57, 57)
                 .addComponent(password, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(77, 77, 77)
+                .addGap(18, 18, 18)
+                .addComponent(chkbox)
+                .addGap(34, 34, 34)
                 .addComponent(botonIniciarSesion)
                 .addContainerGap(104, Short.MAX_VALUE))
         );
@@ -136,7 +150,7 @@ public class logueo extends javax.swing.JFrame {
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 64, Short.MAX_VALUE)
+            .addGap(0, 56, Short.MAX_VALUE)
         );
 
         gridBagConstraints = new java.awt.GridBagConstraints();
@@ -259,6 +273,14 @@ public class logueo extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_passwordActionPerformed
 
+    private void chkboxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_chkboxActionPerformed
+        if(chkbox.isSelected()){
+            password.setEchoChar((char)0);
+        }else{
+            password.setEchoChar('•');
+        }
+    }//GEN-LAST:event_chkboxActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -335,6 +357,7 @@ public void placeHolder(String texto,JTextField textField){
 }
     // Variables declaration - do not modify//GEN-BEGIN:variables
     public static final javax.swing.JButton botonIniciarSesion = new javax.swing.JButton();
+    private javax.swing.JCheckBox chkbox;
     private static final javax.swing.JLabel jLabel1 = new javax.swing.JLabel();
     private static final javax.swing.JLabel jLabel2 = new javax.swing.JLabel();
     private static final javax.swing.JLabel jLabel3 = new javax.swing.JLabel();
