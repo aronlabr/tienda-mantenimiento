@@ -21,7 +21,7 @@ public class Conexion {
        static final String URL = "jdbc:mysql://localhost:3306/de_compras_store?useSSL=false";
        private Conexion(){ //si es que el contructor es privado nunca podre crear conexiones
             try{
-                con = DriverManager.getConnection(URL,ROOT,"root");//NOSONAR
+                con = DriverManager.getConnection(URL,ROOT,"1234");//NOSONAR
             }
             catch(SQLException e){
                 JOptionPane.showMessageDialog(null, "No se pudo conectar a la base de datos");

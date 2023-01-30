@@ -486,6 +486,9 @@ public class logisticaRegistroProv extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_textRUCKeyTyped
 
+    //Modificación Patrick
+    //Estos metodos tanto para Razon social como Nombre del representante se modificara 
+    //el tamaño de extension para cada caracterer
     private void textRazonSocialKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_textRazonSocialKeyTyped
         if(textRazonSocial.getText().length()>=99){
             getToolkit().beep();
